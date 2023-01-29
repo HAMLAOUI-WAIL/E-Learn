@@ -33,62 +33,54 @@ const {profile_id} = useParams();
 
 
 const handleSubmit = e => {
-  e.preventDefault()
-  const utilisateurFormData = new FormData();
-
-  // utilisateurFormData.append("id",formData.id)
-  utilisateurFormData.append("first_name",formData.first_name)
-  utilisateurFormData.append("last_name",formData.last_name)
-  utilisateurFormData.append("email",formData.email)
-  utilisateurFormData.append("password",formData.password)
-  utilisateurFormData.append("phoneNumber",formData.phoneNumber)
-  // let csrf = ' asd '
+alert(formData.first_name)
+alert(formData.last_name)
+alert(formData.email)
+alert(formData.phoneNumber)
   fetch('http://localhost:8000/api/profile/'+profile_id, {
-    method: 'POST',
+    method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(utilisateurFormData)
+    body: JSON.stringify({ 
+      first_name:formData.first_name,
+      last_name:formData.last_name, 
+      email:formData.email,
+      phoneNumber:formData.phoneNumber })
     })
   .then(res => {
-    console.table(res)
     res.json()
-    alert(res)
   })
   .then(data => {
     alert('Success:', data);
   })
   .catch(error => {
-    // alert('Error:', error);
-
-    console.log(error)
+    alert('Error:', error);
   });
 };
 
 
+
+const handleChange_ = (event) => {
+  const { name, value } = event.target;
+  setFormData({ ...formData, [name]: value });
+}
+
 const handleSubmit_ = (event) => {
   // event.preventDefault();
-  let utilisateurFormData = new FormData();
-  // utilisateurFormData.append("id",formData.id)
-  utilisateurFormData.append("first_name",formData.first_name)
-  utilisateurFormData.append("last_name",formData.last_name)
-  utilisateurFormData.append("email",formData.email)
-  // utilisateurFormData.append("password",formData.password)
-  utilisateurFormData.append("phoneNumber",formData.phoneNumber)
-
-  axios.patch('http://localhost:8000/api/profile/'+profile_id, utilisateurFormData,
-  {
-    headers:{
-      'Content-Type':'multipart/form-data'
-    }
-  })
+  axios.patch('http://localhost:8000/api/profile/'+profile_id, formData)
+  // alert(formData.id)
+  //     alert(formData.first_name)
+  //     alert(formData.last_name)
+  //     alert(formData.email)
+  //     alert(formData.phoneNumber)
+  //     alert(formData.password)
     .then(response => {
-      alert("sucess")
       console.log(response);
       alert(response);
       // handle success response
     })
     .catch(error => {
-      alert(error)
       console.log(error);
+      alert(error)
       // handle error
     });
 }
@@ -108,11 +100,17 @@ const submitForm = async() => {
   utilisateurFormData.append("first_name",formData.first_name)
   utilisateurFormData.append("last_name",formData.last_name)
   utilisateurFormData.append("email",formData.email)
-  // utilisateurFormData.append("password",formData.password)
+  utilisateurFormData.append("password",formData.password)
   utilisateurFormData.append("phoneNumber",formData.phoneNumber)
 
       console.log(utilisateurFormData)
       console.log(formData)
+      alert(0)
+      // alert(formData.first_name)
+      // alert(formData.last_name)
+      // alert(formData.email)
+      // alert(formData.phoneNumber)
+      // alert(formData.password)
       await axios({
         method:'PUT',
         url:'http://localhost:8000/api/profile/'+profile_id,
@@ -165,6 +163,7 @@ useEffect(()=>{
         last_name: res.data.last_name,
         password:res.data.password,
         phoneNumber:res.data.phoneNumber,
+
       })
     })
     
@@ -175,7 +174,7 @@ useEffect(()=>{
 
   return (
     // onSubmit={handleSubmit}
-    <form className="form">
+    <form className="form" >
         <h2>Informations Générales 🙂</h2>
         <div className="form-box">
 
@@ -259,7 +258,7 @@ useEffect(()=>{
     
 
         <div className="form-btn">
-          <button type='submit' onClick={handleSubmit}>Update changes</button>
+          <button type='submit' onClick={submitForm}>Update changes</button>
         </div> 
     </form>
   )

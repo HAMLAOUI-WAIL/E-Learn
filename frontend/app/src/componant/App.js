@@ -51,10 +51,10 @@ const App=()=>{
       
       <Route exact path='/dashbord' element={<Dashbord/>}/>
 
-      <Route path="/annonces" element = {<Annonces/>}/>
+      <Route path="/annonces" element = {<Prof/>}/>
       <Route path="/mes-favoris" element = {<Mes_favoris/>}/>
       <Route path="/mes-messages" element = {<Mes_messages/>}/>
-      <Route path="/mes-annonces" element = {<Mes_annonces/>}/>
+      <Route path="/mes-annonces" element = {<Annonces/>}/>
       
     </Routes>
   )

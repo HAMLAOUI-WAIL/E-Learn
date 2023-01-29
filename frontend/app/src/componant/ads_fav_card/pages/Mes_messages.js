@@ -3,7 +3,9 @@ import Navbar from '../../header/Navbar';
 import "./Mes-messagesStyles.css";
 
 function Mes_messages() {
+  
   return (
+    
     <>
     <Navbar/>
     <div className="mes-messages">
@@ -19,15 +21,16 @@ function Mes_messages() {
       </div>
 
     <div className='mes-messagesSection2'>
-      <div className='box__'><p style={{marginLeft:40 ,marginTop:40, marginRight:40}}>Bonjour Alaa irada, 
+      <div className='box__'><p style={{marginLeft:40 ,marginTop:40, marginRight:40} } > Bonjour Alaa irada, 
 Je m’appelle Melissa et je cherche un professeur de Physique. 
 Je souhaiterais prendre les cours chez vous ou chez moi. 
 Idéalement, j’aimerais débuter les cours au plus tôt. 
 Est ce que cela vous irait ? Pouvez-vous prendre contact avec moi afin que 
  l’on en parle ? 
 Je vous souhaite une excellente journée, 
-A bientôt, MELISSA</p>
-     </div>
+A bientôt,</p>  </div>
+
+
      <div class="minibox">
         +213568427981
       </div>

@@ -10,9 +10,9 @@ const CardsFavoris = ({ item, handleClick }) => {
       <div className="details">
         <p>{title}</p>
         <p>{author}</p>
-        <p>Price - {price}DZ</p>
+        <p>Prix - {price}DZ</p>
 
-        <button onClick={() => handleClick(item)}>Contacter</button>
+        <button><a  href="/ContacterProf">contacter</a></button>
         <button onClick={() => handleClick(item)}>Supprimer</button>
         
       </div>

@@ -165,6 +165,8 @@
 }
 
 
+
+
 @media screen and (min-width: 280px) and (max-width: 1080px) {
     .section{
         margin: 2rem;
@@ -173,6 +175,7 @@
     .section .ProfListDom {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        border-radius: 10rem;
     }
 }
 

@@ -6,9 +6,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    border-width: 0.2rem;
-    border-radius: 1rem;
-    border-style:solid;
+    
    gap:2.2rem;   
   }
   .cards {

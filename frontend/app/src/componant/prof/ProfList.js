@@ -49,12 +49,12 @@ export default function ProfList() {
   ];
 
   const ProfListDom = [
-    "All",
-    "France",
+    "Tous",
+    "Francais",
     "Math",
-    "Physiq",
+    "Physique",
     "Science",
-    "Arabic",
+    "Arabe",
   ];
 
   return (
@@ -64,7 +64,7 @@ export default function ProfList() {
         </div>
         <div className="ProfListDom">
             {ProfListDom.map((text, index) => {
-                return <Button text={text} key={index} blue={index === 0} />;
+                return <Button  text={text} key={index} blue={index === 0} />;
             })}
         </div>
         <div className="prof_list">
@@ -83,7 +83,7 @@ export default function ProfList() {
                         <h6 className="username">Math & Info</h6>
 
                         <div className="price-container">
-                            <h5 className="price">55 $</h5>
+                            <h5 className="price">2500 DZ</h5>
                             <img src={dots} alt="" />
                         </div>
                     </div>

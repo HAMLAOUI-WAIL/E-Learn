@@ -20,7 +20,7 @@ export default function Prof() {
                         <div className="colon">
                             <h2>We help our student to <br /> find Courses with <br /> Expert</h2>
                             <p>
-                                deserunt id iste,quas officiis et repellat!
+                                votre meilleur accampagnant !
                             </p>
 
                             <form action="">
