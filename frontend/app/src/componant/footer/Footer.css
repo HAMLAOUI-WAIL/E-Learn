@@ -1,0 +1,60 @@
+
+.footer{
+    background: linear-gradient(rgba(0,0,0,.5 ) ,rgba(0,0,0,.5 )) ,url(../../images/R.jfif) no-repeat;
+    background-size: cover ;
+    background-position: center;
+    background-attachment: fixed; 
+    margin-top: 3rem;
+}
+
+.footer .box-containerF{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+
+.footer .box-containerF .box {
+    padding-left: 3rem;
+}
+
+.footer .box-containerF .box h3 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: #fff;
+    translate: -100px;
+}
+
+.footer .box-containerF .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer .box-containerF .box a i {
+    color: #fff;
+    padding-right: .5rem;
+}
+
+.footer .box-containerF .box a:hover {
+    color: #219150;     
+}
+
+.footer .box-containerF .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+  
+.footer .credit span {
+    color: #219150;
+}
+  
+

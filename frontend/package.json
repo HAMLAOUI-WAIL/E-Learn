@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "framer-motion": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-router-dom": "^5.3.4",
+    "reactstrap": "^9.1.5",
+    "swiper": "^8.4.5"
+  }
+}

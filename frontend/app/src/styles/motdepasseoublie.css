@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+	color: #9b59b6;
+}
+#retour{
+    text-decoration: none;
+   color: rgb(56, 66, 204);
+    font-family: sans-serif;
+    font-size: 35px;
+    margin-left: 10px;
+    padding: 10px;
+}
+body{
+    display: flex;
+    height: 110vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg,#6254E3,#55348f);
+}
+div.main{
+	
+    width: 500px;
+    margin: 50px auto 0px auto;
+	
+}
+img{
+    width: 100px;
+
+}
+h2{
+    text-align: center;
+    padding: 0px;
+    font-family: sans-serif;
+	color: black;
+}
+
+h5{
+    padding: 0px;
+    font-family: sans-serif;
+	color: black;
+}
+div.register{
+    background-color: rgb(255, 255, 255);
+	
+    width: 100%;
+    font-size:15px;
+    border-radius: 10px;
+    border: 1px soid rgba(255,255,255,0.3); 
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    color: #fff;
+    margin-top: 5px;
+
+}
+form#register{
+    margin: 40px;
+}
+label{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: italic;
+}
+input#name{
+    width:400px ;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+select{
+    width:417px ;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+textarea{
+    width:400px ;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#72a6c9,#1a1f68);
+   margin-bottom: 20px;
+   padding: 5px;
+
+}
+form .button input:hover{
+    background: linear-gradient(120deg,#543ab3,#2e38ca);
+
+}
+label,span,h2{
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+.register form#register input:focus,
+.register form#registe input:valid{
+    border-color: rgb(16, 93, 236);
+
+}

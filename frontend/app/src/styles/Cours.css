@@ -1,0 +1,92 @@
+.Parentdiv_ .content_{
+    display: flex;
+   align-items: center;
+   justify-content: space-around;
+ 
+   
+}
+
+.Parentdiv_ .content_ .left-side{
+   margin-left: 2rem; 
+   width: 40rem;
+   height: 40rem;
+}
+
+.Parentdiv_ .content_ .right-side{
+    width: 70rem;
+    height: 70rem;
+}
+
+
+/* /////////////////////////////// */
+.ProfDiv .content_{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ProfDiv .content_ .left-side{
+    width: 40rem;
+    height: 40rem;
+    margin-top: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ProfDiv .content_ .right-side{
+    margin-top: 12rem;
+    width: 40rem;
+    height: 40rem;
+    
+}
+.ProfDiv .content_ .left-side h1{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 4rem;
+}
+
+.content_ .left-side h1{
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.content_ .left-side p{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #222222;
+    margin: 0 0 10px;
+}
+
+.ProfDiv .content_ .left-side .btnP{
+    color: #fff;
+    background-color: rgb(135,36,212);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.ProfDiv .content_ .left-side .btnP:hover{
+    background-color: rgb(114, 75, 145); 
+}
+
+.content_ .left-side .btnGoogle{
+    margin-left: 4rem;
+    width: 30rem;
+    height: 40px;
+}
+
+@media (max-width: 960px) {
+    .content_ .right-side{
+        display: none;
+    }
+    .content_ .left-side{
+        margin-top: 6rem;
+    }
+
+}
+

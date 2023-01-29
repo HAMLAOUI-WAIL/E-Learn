@@ -1,0 +1,34 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 12/08/2018 13:24
+  	*/
+
+
+
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-resume:before { content: "\f100"; }
+.flaticon-team:before { content: "\f101"; }
+.flaticon-career:before { content: "\f102"; }
+.flaticon-employees:before { content: "\f103"; }
+.flaticon-contact:before { content: "\f104"; }
+.flaticon-mortarboard:before { content: "\f105"; }
+.flaticon-idea:before { content: "\f106"; }
+.flaticon-accounting:before { content: "\f107"; }
+.flaticon-dish:before { content: "\f108"; }
+.flaticon-stethoscope:before { content: "\f109"; }
+.flaticon-worldwide:before { content: "\f10a"; }
+.flaticon-visitor:before { content: "\f10b"; }

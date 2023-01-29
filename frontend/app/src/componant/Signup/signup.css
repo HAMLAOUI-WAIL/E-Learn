@@ -1,0 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
+
+.signup{
+       /* display: flex; */
+       /* justify-content: space-between; */
+       text-align: center;
+       /* background: url(../../images/forest.jpg) no-repeat; */
+       position: relative;
+       background-position:cover;
+       margin: 2rem;
+       
+}
+
+.signup form{
+       
+       margin-top: 50px;
+       margin-left: 130px;
+       padding: 2em;
+       width: 34em;
+       min-height: 35em;
+       background: radial-gradient(
+      circle at -3.1% -4.3%,
+      rgb(135, 36, 212) 10%,
+      rgb(59, 199, 243) 90%
+    );
+    opacity: 0.9;
+
+}
+.signup .logo{
+       width: 3em;
+       height: 3em;
+       margin-bottom :2em;
+}
+
+.signup h1{
+       font-size: 30px;
+       font-weight: bold;
+       margin-bottom :1em;
+       text-align:  center;
+}
+
+
+.signup input{
+       display: block;
+       padding: 1em;
+       width: 29.7em;
+       outline: none;
+       border: solid 2px rgb(215, 215, 215);
+       border-radius: 9px;
+       margin: 10px 6px;
+       align-items: center;
+       margin-bottom: 30px;
+       transition: 0.2s ease;
+
+}
+
+.signup input:hover{
+       background-color: rgb(218, 218, 218);
+
+}
+
+.signup .flname{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+
+.signup .flname input{
+       margin-bottom: 20px;
+       width: 14.1em;
+}
+
+
+
+       
+.signup .btnSignUP{
+       color:aliceblue;
+       font-weight: bold;
+       display: block;
+       width: 29.7em;
+       /* height: 20px; */
+       font-size: 10px;
+       margin-left: 4px;
+       background-color: #5956E9;
+       height: 2.6em;
+       padding:10px;
+       margin-bottom: 20px;
+       cursor: pointer;
+       border: none;
+       border-radius: 9px;
+       transition: 0.3s ease;
+       
+}
+
+.signup .btnSignUP:hover{
+       background-color: #2421dc;
+}
+
+
+.signup p{
+       font-size: 15px;
+}
+
+
+.signup .signin{
+
+       border:none;
+       outline: none;
+       text-decoration: none;
+       background: none;
+       color:#5956E9;
+       margin-top: 10px;
+       cursor: pointer;
+       
+}
+.signup .signin:hover{
+       background-color: #2421dc;
+       color:aliceblue;
+
+}
+
+
+.signup .illustration{
+       position:absolute;
+       margin-left: 12em;
+       top:100px;
+       height: 350px;
+       width: 400px;
+}

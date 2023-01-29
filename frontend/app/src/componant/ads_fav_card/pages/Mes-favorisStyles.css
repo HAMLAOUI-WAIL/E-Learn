@@ -1,0 +1,32 @@
+.mes-favoris {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: white */
+    }
+  
+    .mes-favoris h1 {
+    font-size: 48px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    background: -webkit-linear-gradient(45deg, #8724D4 , #3BC7F3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .mes-favoris h3 {
+    background: radial-gradient(
+      circle at -3.1% -4.3%,
+      rgb(135, 36, 212) 0%,
+      rgb(59, 199, 243) 90%
+    );
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  

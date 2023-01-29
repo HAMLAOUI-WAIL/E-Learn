@@ -1,0 +1,91 @@
+.team .heading{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: black;
+    text-align: center;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #8724D4 , #3BC7F3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 1.5rem;
+}
+  
+  .team .box-container .box {
+    text-align: center;
+    padding: 1rem;
+    background-color:rgb(216, 215, 215);
+    border-radius: 10px;
+  }
+  
+  .team .box-container .box img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .team .box-container .box h3 {
+    font-size: 2rem;
+    color: #cf24b3;
+  }
+  
+  .team .box-container .box p {
+    font-size: 1.5rem;
+    color: #10221b;
+    padding: 1rem 0;
+    line-height: 2;
+  }
+  
+  .team .btn{
+    background: none;
+    cursor: pointer;
+    color: black;
+    font-size: 2rem;
+    margin-top: 1rem;
+    display: inline-block;/*bah majich l7ala dakhla fi b3adha*/
+    border-radius: 10px;
+    border: 0.3rem solid #10221b;
+    padding: 1rem 3rem; /*lazm bah ta3d lkatba 3la l border*/
+}
+
+.team .btn:hover{
+    background: #10221b;
+    color: white;
+}
+
+/* .homeSlide h1 {
+  font-size: 45px;
+  line-height: 55px;
+  margin: 50px 0 20px 0;
+}
+.homeSlide p {
+  margin: 20px 0;
+}
+.homeSlide ul {
+  position: absolute;
+  bottom: 20px;
+}
+.homeSlide ul li {
+  border: 2px solid #b8b7b7;
+  border-radius: 50%;
+  padding: 10px;
+}
+.homeSlide ul li button {
+  background: transparent !important;
+  color: transparent !important;
+}
+.homeSlide ul li button::before {
+  font-size: 15px !important;
+  color: #0f3460;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: auto;
+} */

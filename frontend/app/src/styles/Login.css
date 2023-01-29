@@ -1,0 +1,83 @@
+
+
+.title{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.container .form{
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #2bbebe;
+    color: #c2bdbd;
+    background: rgb(243, 241, 241);
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+    
+}
+
+.form input::placeholder{
+    padding-left: 1rem;
+    font-size: small;
+}
+
+.form .btn{
+    color: white;
+    background-color: rgb(135,36,212);
+    width: 250px;
+    height: 30px;
+    margin-top: 3rem;
+    border-radius: 10px;
+    font-size: 1.7em;
+}
+
+.form .btn:hover{
+    color: white;
+    background-color: rgb(155, 104, 194);
+}
+
+.btnGoogle{
+    border-color: black;
+    width: 250px;
+    height: 30px;
+    margin-top: 3rem;
+    border-radius: 10px;
+}
+
+.btnGoogle:hover{
+    background-color: #c2bdbd;
+    text-decoration: none;
+}
+
+.btnGoogle a:hover{
+    text-decoration: none;
+}
+
+
+.btnGoogle img{
+    margin-right: 2rem;
+    border-radius: 20px;
+}
+
+

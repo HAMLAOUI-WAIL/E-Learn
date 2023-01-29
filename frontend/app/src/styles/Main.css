@@ -1,0 +1,14 @@
+.contantMain{
+    position: relative;
+}
+
+.title__{
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    padding-bottom: 10px;
+    background: -webkit-linear-gradient(45deg, #8724D4 , #3BC7F3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

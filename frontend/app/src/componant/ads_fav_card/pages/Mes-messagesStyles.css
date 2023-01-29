@@ -1,0 +1,106 @@
+.mes-messages {
+  width: 100%;
+  height: 10vh;
+  display:inline-flex;
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
+}
+
+.mes-messages h1 {
+  font-size: 48px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  background: -webkit-linear-gradient(45deg, #8724D4 , #3BC7F3 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mes-messagesSection {
+  width: 100%;
+  border-radius: 30px;
+  height: 100vh;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items: center; 
+  position: center;     
+}
+
+.mes-messagesSection1 {
+  width: 30%;
+  border-radius: 30px;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center; 
+  position: center;     
+  background: linear-gradient(90deg, #effaff 0%, #d9e7ff 100%);
+}
+
+.mes-messagesSection2 {
+  width: 60%;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;  
+  position: center; 
+  margin: 2rem;   
+  background: linear-gradient(90deg, #effaff 0%, #d9e7ff 100%);
+  border-radius: 30px;
+}
+
+
+
+.mes-messagesSection1 button {
+  background: radial-gradient(
+    circle at -3.1% -4.3%,
+    rgb(135, 36, 212) 0%,
+    rgb(59, 199, 243) 90%
+  );
+  
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 1rem;
+}
+
+.mes-messagesSection1 button:hover{
+  background: radial-gradient(
+    circle at -3.1% -4.3%,
+    rgb(163, 92, 218) 0%,
+    rgb(0, 181, 236) 90%
+  );
+} 
+
+.mes-messagesSection2  {
+  background-color: #fff;
+  color: black;
+  width: 80%;
+}
+
+.box__{
+  background-color: #fff;
+  color: black;
+  width: 80%;
+  height:60%;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+.minibox{
+  background-color: #fff;
+  color: black;
+  width: 250px;
+  height:50px;
+  font-size: 20px;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-left: -500px ;
+  text-align: center ;
+  padding-top: 10px; 
+}

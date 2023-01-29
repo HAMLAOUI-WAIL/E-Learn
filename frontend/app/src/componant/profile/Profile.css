@@ -1,0 +1,148 @@
+.Profile-container{
+    background-color: rgb(233, 236, 236);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Profile-container .cont{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.Profile-container .profile-box{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 15px;
+    padding: 3rem;
+    margin: 2rem;
+}
+
+.Profile-container .profile-box:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 25px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 3rem;
+    margin: 2rem;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.cont  .box-image .imageCL,.cont .box-image .mdp{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.cont  .box-image .imageCL:hover,.cont .box-image .mdp:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 24px 25px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.cont .box-image .btn11{
+    margin-top: 2rem;
+    /* background-color: antiquewhite; */
+  background: #52cff5;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.cont .box-image img{
+    border-radius: 20px;
+    margin-left: 2rem;
+}
+
+.form .form-box label{
+    padding: 2rem;
+}
+
+.form .form-btn button{
+    /* background-color: antiquewhite; */
+  background: #52cff5;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.form .form-btn {  
+    text-align: center;
+    margin-top: 2rem;
+    background: #52cff5;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.cont .box-image .mdp{
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.cont .box-image .btn11:hover{
+  background: #04b6ec;
+}
+
+/* //////////////////////////////////////////////////// */
+.btn-primary:hover{color:#fff;background-color:#4d87df;border-color:#0257d5}
+.btn-primary:focus{color:#fff;background-color:#025ce2;border-color:#0257d5;box-shadow:0 0 0 .2rem rgba(49,132,253,.5)}
+
+.profile-info h1,.titlePage{
+    font-size: 48px;
+    font-weight: 800;
+    padding-bottom: 10px;
+    background: -webkit-linear-gradient(45deg, #8724D4 , #3BC7F3 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titlePage{
+    text-align: center;
+}
+
+.changePass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 10px,
+    rgba(0, 0, 0, 0.12) 0px -5px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 8px 8px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 3rem;
+    margin: 2rem;
+    width: 50rem;
+    height: 40rem;
+    margin-left: 40rem;
+}
+
+.changePass .form-box label{
+    width: 200px;
+    height: 20px;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.changePass .form-box label input{
+    margin: 2rem;
+    width: 140px;
+    height: 20px;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.changePass button,.add button{
+    color: #ffffff;
+    background-color: #04b6ec;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+}
+.changePass button:hover{
+    background-color: #5cc8e9;
+}
