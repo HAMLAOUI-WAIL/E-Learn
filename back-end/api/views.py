@@ -6,24 +6,17 @@ from rest_framework import generics
 from rest_framework.generics import CreateAPIView,UpdateAPIView
 from django.contrib.auth.forms import UserChangeForm
 from rest_framework.views import APIView
-from .serializer import UTILISATEURSSerializer
-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializer import UserSerializer,CreateUsrSerializer
 from . import models
 from django.shortcuts import get_object_or_404
-# from django.contrib.auth.models import User
 from rest_framework import viewsets, status
-
 from django.shortcuts import render
 from rest_framework import permissions
-from .serializers import UTILISATEURSSerializer,FlatPagesSerializer
+from .serializers import UTILISATEURSSerializer,FlatPagesSerializer,UTILISATEURSSerializer,CATEGORIESSerializer,ANNONCESSerializer
 from django.http import JsonResponse
 from django.contrib.flatpages.models import FlatPage
-from .serializers import UTILISATEURSSerializer
-from .serializers import CATEGORIESSerializer
-from .serializers import ANNONCESSerializer
 
 # Create your views here.
 def getRoutes(request):
