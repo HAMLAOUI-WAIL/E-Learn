@@ -5,6 +5,7 @@ import About from './about/About';
 import Condidat from './Condidat';
 import Contact from './contact/Contact';
 import Login from './Login';
+import Logout from './Logout';
 import Main from './Main';
 import ProfSoutien from './ProfSoutien';
 import Register from '../componant/Signup/SignUp';
@@ -55,7 +56,7 @@ const App=()=>{
       <Route path="/mes-favoris" element = {<Mes_favoris/>}/>
       <Route path="/mes-messages" element = {<Mes_messages/>}/>
       <Route path="/mes-annonces" element = {<Annonces/>}/>
-      
+      <Route path="/logout" element = {<Logout/>}/>
     </Routes>
   )
 }

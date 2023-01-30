@@ -6,6 +6,7 @@ from rest_framework import generics
 from rest_framework.generics import CreateAPIView,UpdateAPIView
 from django.contrib.auth.forms import UserChangeForm
 from rest_framework.views import APIView
+from .serializer import UTILISATEURSSerializer
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -40,11 +41,7 @@ def getRoutes(request):
 class UserList(generics.ListCreateAPIView):
     queryset = models.UTILISATEURS.objects.all()
     serializer_class = UserSerializer
-    # def get(self,request):
-    #     users = models.UTILISATEURS.objects.all()
-    #     serializer = UserSerializer(users,many=True)
-    #     return Response(serializer.data)
-    
+
    
 # class DataUserList(generics.ListCreateAPIView):
 #     queryset = models.UTILISATEURS.objects.all()
@@ -147,3 +144,24 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)    
+    
+
+class UTILISATEURSList(generics.ListCreateAPIView):
+    queryset = models.UTILISATEURS.objects.all()
+    serializer_class = UTILISATEURSSerializer
+    
+
+class UTILISATEURSDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.UTILISATEURS.objects.all()
+    serializer_class = UTILISATEURSSerializer
+    
+    
+@csrf_exempt
+def utilisateur_login(request):
+    email=request.POST['email']
+    password=request.POST['password']
+    utilisateurData=models.UTILISATEURS.objects.get(email=email,password=password)
+    if utilisateurData :
+        return JsonResponse({'bool':True})
+    else :
+        return JsonResponse({'bool':False})
