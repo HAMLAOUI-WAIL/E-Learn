@@ -7,6 +7,10 @@ class UTILISATEURSSerializer(serializers.ModelSerializer):
       model = models.UTILISATEURS
       fields =['id','first_name','last_name','email','password','phoneNumber']
 
+class AnnonceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Annonce
+        fields = ['description', 'email', 'telephone','categorie','details','theme','lieu','lieu','file','tarif']        
 
 class FlatPagesSerializer(serializers.ModelSerializer):
   class Meta:
