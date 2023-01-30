@@ -1,6 +1,29 @@
 from rest_framework import serializers
 from . import models
+from django.contrib.flatpages.models import FlatPage
 
+class UTILISATEURSSerializer(serializers.ModelSerializer):
+    class Meta :
+      model = models.UTILISATEURS
+      fields =['id','first_name','last_name','email','password','phoneNumber']
+
+
+class FlatPagesSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = FlatPage
+    fields=['id','title','content','url']
+
+class CATEGORIESSerializer(serializers.ModelSerializer):
+    class Meta :
+      model = models.CATEGORIES
+      fields =["namecat"]
+
+class ANNONCESSerializer(serializers.ModelSerializer):
+    class Meta :
+      model = models.ANNONCES
+      fields =["id","titre","rel_categorie","rel_wilaya","rel_module","rel_utilisateur",'contenu','tarifs']
+      depth=1
+      
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.UTILISATEURS
@@ -24,3 +47,13 @@ class CreateUsrSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.UTILISATEURS   
         fields = ('first_name','last_name','email','phoneNumber')
+
+
+class CreateUsrSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.UTILISATEURS   
+        fields = ('first_name','last_name','email','phoneNumber')
+class UTILISATEURSSerializer(serializers.ModelSerializer):
+    class Meta :
+      model = models.UTILISATEURS
+      fields =['id','first_name','last_name','email','password','phoneNumber']
