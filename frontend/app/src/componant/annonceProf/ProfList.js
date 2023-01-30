@@ -4,9 +4,7 @@ import prof1 from "../../images/marketplace2.png"
 import prof2 from "../../images/marketplace2.png"
 import prof3 from "../../images/marketplace2.png"
 import prof4 from "../../images/marketplace2.png"
-import prof5 from "../../images/marketplace2.png"
-import prof6 from "../../images/marketplace2.png"
-import prof7 from "../../images/marketplace2.png"
+
 
 import dots from "../../images/dots.png"
 
@@ -32,20 +30,7 @@ export default function ProfList() {
     {
       image: prof4,
       name: "HAMLAOUI WAIL",
-    },
-    {
-      image: prof5,
-      name: "HAMLAOUI WAIL",
-    },
-    {
-      image: prof6,
-      name: "HAMLAOUI WAIL",
-    },
-    {
-      image: prof7,
-      name: "HAMLAOUI WAIL",
-    },
-    
+    }
   ];
 
   const ProfListDom = [
@@ -90,9 +75,10 @@ export default function ProfList() {
                 );
             })}
         </div>
-        <button className='Btn_'>
-          voir plus de professeur -
-        </button>
+        <NavLink to={"/Login"}>
+          <button className='Btn_' style={{textAlign:'center',alignItems:'center'}} >Trouver plus des Announce</button>
+        </NavLink>
+
     </div>
   )
 }

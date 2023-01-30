@@ -11,13 +11,13 @@ const netLink = [
     display:'About',
     url:'/about'
 },
-// {
-//     display:'Courses',
-//     url:'/TrouvProf'
-// },
 {
     display:'Contact',
     url:'/contact'
+},
+{
+    display:'Announce',
+    url:'/Prof'
 },
 
 ]
@@ -56,7 +56,7 @@ return (
                         {
                             netLink.map((item,index)=>(
                                 <li className="nav_item" key={index} >
-                                    <NavLink to={item.url}>{item.display}</NavLink>
+                                    <NavLink to={item.url}><a style={{listStyle:'none'}}>{item.display}</a></NavLink>
                                 </li>
                             ))   
                         }

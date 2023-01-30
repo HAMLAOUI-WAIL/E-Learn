@@ -9,7 +9,7 @@ import Main from './Main';
 import ProfSoutien from './ProfSoutien';
 import Register from '../componant/Signup/SignUp';
 import TrouverProf from './TrouverProf';
-import Prof from './prof/Prof';
+import Prof from './annonceProf/Prof';
 import Ajouterannonce from './Ajouterannonce'
 import Afficherannonce from './Afficherannonce';
 import Contacter from './contacter/Contacter';
