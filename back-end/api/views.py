@@ -6,6 +6,7 @@ from rest_framework import generics
 from rest_framework.generics import CreateAPIView,UpdateAPIView
 from django.contrib.auth.forms import UserChangeForm
 from rest_framework.views import APIView
+from .serializer import UTILISATEURSSerializer
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -15,45 +16,40 @@ from django.shortcuts import get_object_or_404
 # from django.contrib.auth.models import User
 from rest_framework import viewsets, status
 
+from django.shortcuts import render
+from rest_framework import permissions
+from .serializers import UTILISATEURSSerializer,FlatPagesSerializer
+from django.http import JsonResponse
+from django.contrib.flatpages.models import FlatPage
+from .serializers import UTILISATEURSSerializer
+from .serializers import CATEGORIESSerializer
+from .serializers import ANNONCESSerializer
+
 # Create your views here.
 def getRoutes(request):
     routes=[   
-        {
-            'Endpoint':'/contact',
-            'methode':'GET'
-        },
-        {
-            'Endpoint':'/annonce/create/',
-            'methode':'POST'
-        },
-        {
-            'Endpoint':'/profile',
-            'methode':'POST'
-        },
-        {
-            'Endpoint':'/AjouterAnnonce',
-            'methode':'GET'
-        },
+#         {
+#             'Endpoint':'/contact',
+#             'methode':'GET'
+#         },
+#         {
+#             'Endpoint':'/annonce/create/',
+#             'methode':'POST'
+#         },
+#         {
+#             'Endpoint':'/profile',
+#             'methode':'POST'
+#         },
+#         {
+#             'Endpoint':'/AjouterAnnonce',
+#             'methode':'GET'
+#         },
     ]
     return JsonResponse(routes ,safe=False)
 
 class UserList(generics.ListCreateAPIView):
     queryset = models.UTILISATEURS.objects.all()
     serializer_class = UserSerializer
-    # def get(self,request):
-    #     users = models.UTILISATEURS.objects.all()
-    #     serializer = UserSerializer(users,many=True)
-    #     return Response(serializer.data)
-    
-   
-# class DataUserList(generics.ListCreateAPIView):
-#     queryset = models.UTILISATEURS.objects.all()
-#     serializer_class = UserSerializer
-#     # def get(self):
-#     #     users_id = self.kwargs['profile_id']
-#     #     user=models.UTILISATEURS.objects.get(pk=users_id)
-#     #     return models.UTILISATEURS.objects.filter(user=user)
-       
     
 class UserListDtail(generics.RetrieveUpdateAPIView):
     queryset = models.UTILISATEURS.objects.all()
@@ -90,12 +86,6 @@ def UserUpdateView(request):
     last_name=request.POST('last_name')
     email=request.POST('email')
     phoneNumber=request.POST('phoneNumber')
-        
-
-
-
-
-
 
 class CreateUsrView(APIView):
     serializer_class = CreateUsrSerializer
@@ -120,14 +110,7 @@ class CreateUsrView(APIView):
                 user.save(update_fields=['first_name','last_name','email','phoneNumber'])
             
             return Response(UserSerializer(user).data,status=status.HTTP_400_BAD_REQUEST)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)    
-        
-
-
-
-       
-       
-       
+        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)      
        
 class UserEdirView(generic.CreateView):
     def get(self,request):
@@ -147,3 +130,70 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)    
+    
+
+class UTILISATEURSList(generics.ListCreateAPIView):
+    queryset = models.UTILISATEURS.objects.all()
+    serializer_class = UTILISATEURSSerializer
+    
+
+class UTILISATEURSDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.UTILISATEURS.objects.all()
+    serializer_class = UTILISATEURSSerializer
+    
+    
+@csrf_exempt
+def utilisateur_login(request):
+    email=request.POST['email']
+    password=request.POST['password']
+    utilisateurData=models.UTILISATEURS.objects.get(email=email,password=password)
+    if utilisateurData :
+        return JsonResponse({'bool':True})
+    else :
+        return JsonResponse({'bool':False})
+
+class UTILISATEURSList(generics.ListCreateAPIView):
+    queryset = models.UTILISATEURS.objects.all()
+    serializer_class = UTILISATEURSSerializer
+    
+
+class UTILISATEURSDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.UTILISATEURS.objects.all()
+    serializer_class = UTILISATEURSSerializer
+    
+@csrf_exempt
+def utilisateur_login(request):
+    email=request.POST['email']
+    password=request.POST['password']
+    utilisateurData=models.UTILISATEURS.objects.get(email=email,password=password)
+    if utilisateurData :
+        return JsonResponse({'bool':True})
+    else :
+        return JsonResponse({'bool':False})
+
+class FlatPagesList(generics.ListAPIView):
+    queryset =FlatPage.objects.all()
+    serializer_class = FlatPagesSerializer
+
+class FlatPagesDetail(generics.RetrieveAPIView):
+    queryset =FlatPage.objects.all()
+    serializer_class = FlatPagesSerializer
+
+class CATEGORIESList(generics.ListCreateAPIView):
+    queryset = models.CATEGORIES.objects.all()
+    serializer_class = CATEGORIESSerializer
+
+class ANNONCESList(generics.ListCreateAPIView):
+    queryset = models.ANNONCES.objects.all()
+    serializer_class = ANNONCESSerializer
+
+    def get_queryset(self):
+        qs=super().get_queryset()
+        if 'result' in self.request.GET:
+            limit=self.request.GET['result']
+            qs=models.Annonce.objects.all().order_by('-id')[:limit]
+        
+        
+        if 'categorie' in self.request.GET:
+            categorie=self.request.GET['categorie']
+            qs= models.Annonce.objects.filter(modul_icontains = categorie)    
