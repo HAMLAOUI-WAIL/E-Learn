@@ -11,6 +11,3 @@ class Annonce(models.Model):
 	lieu = models.CharField(max_length=200)
 	File = models.ImageField(upload_to=None, null=True, blank=True)
 	tarif=models.CharField(max_length=50)
-
-	def __str__(self):
-		return self.name
