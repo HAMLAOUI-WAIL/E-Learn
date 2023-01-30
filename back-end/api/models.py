@@ -39,6 +39,7 @@ class ANNONCES(models.Model):
      contenu = models.TextField()
     #  tarif
      tarif = models.IntegerField()
+        
 
 class MESSAGES(models.Model):
     
