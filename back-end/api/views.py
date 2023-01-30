@@ -14,27 +14,27 @@ from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, status
 from django.shortcuts import render
 from rest_framework import permissions
-from .serializers import UTILISATEURSSerializer,FlatPagesSerializer,UTILISATEURSSerializer,CATEGORIESSerializer,ANNONCESSerializer
+from .serializer import UTILISATEURSSerializer,FlatPagesSerializer,UTILISATEURSSerializer,CATEGORIESSerializer,ANNONCESSerializer
 from django.http import JsonResponse
 from django.contrib.flatpages.models import FlatPage
-from .models import Annonce
-from .serializers import AnnonceSerializer
+# from .models import Annonce
+from .serializer import ANNONCESSerializer
 
-def annonces(request):
-	data = Annonce.objects.all()
-	serializer = AnnonceSerializer(data, many=True)
-	return JsonResponse({'annonces': serializer.data})
+# def annonces(request):
+# 	data = Annonce.objects.all()
+# 	serializer = AnnonceSerializer(data, many=True)
+# 	return JsonResponse({'annonces': serializer.data})
 
 @api_view(['GET', 'POST'])
 def annonce_list(request, format=None):
 
     if request.method == 'GET':
-        annonces = Annonce.objects.all()
-        serializer = AnnonceSerializer(annonces, many=True)
+        annonces = models.ANNONCES.objects.all()
+        serializer = ANNONCESSerializer(annonces, many=True)
         return Response(serializer.data)
 
     if request.method == 'POST':
-        serializer = AnnonceSerializer(data=request.data)
+        serializer = ANNONCESSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -43,8 +43,8 @@ def annonce_list(request, format=None):
 def annonce_detail(request, id, format=None):
 
     try:
-        annonce = Annonce.objects.get(pk=id)
-    except Annonce.DoesNotExist:
+        annonce = models.ANNONCES.objects.get(pk=id)
+    except models.ANNONCES.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':
@@ -229,9 +229,9 @@ class ANNONCESList(generics.ListCreateAPIView):
         qs=super().get_queryset()
         if 'result' in self.request.GET:
             limit=self.request.GET['result']
-            qs=models.Annonce.objects.all().order_by('-id')[:limit]
+            qs=models.ANNONCES.objects.all().order_by('-id')[:limit]
         
         
         if 'categorie' in self.request.GET:
             categorie=self.request.GET['categorie']
-            qs= models.Annonce.objects.filter(modul_icontains = categorie)    
+            qs= models.ANNONCES.objects.filter(modul_icontains = categorie) 
