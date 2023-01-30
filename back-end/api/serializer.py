@@ -24,14 +24,3 @@ class CreateUsrSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.UTILISATEURS   
         fields = ('first_name','last_name','email','phoneNumber')
-
-
-class CreateUsrSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.UTILISATEURS   
-        fields = ('first_name','last_name','email','phoneNumber')
-class UTILISATEURSSerializer(serializers.ModelSerializer):
-    class Meta :
-      model = models.UTILISATEURS
-      fields =['id','first_name','last_name','email','password','phoneNumber']
-

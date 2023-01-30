@@ -41,7 +41,6 @@ class Navbar extends Component{
                 <li><CustomLink to ='/mes-messages' >Mes messages</CustomLink></li>
                 <li><CustomLink to ='/mes-annonces' >Mes annonces</CustomLink></li>
                 <li><CustomLink  to ='/profile' >Profil</CustomLink></li> 
-                <li><CustomLink  to ='/logout' >logout</CustomLink></li> 
                 
             </ul>
         </div>
