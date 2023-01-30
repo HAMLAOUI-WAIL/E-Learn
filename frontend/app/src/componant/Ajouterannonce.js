@@ -10,12 +10,17 @@ import Navbar from './header/Navbar';
 //import Autocomplete from "react-google-autocomplete"
 
 export default function Ajouterannonce(){
-	const [value, setValue] = useState()
+  const [details, setDetails] = useState('');
+  const [theme, setTheme] = useState('');
+  const [description, setDescription] = useState('');
+  const [lieu, setLieu] = useState('');
+	const [tarif, setTarif] = useState();
   const [file, setFile] = useState();
-    function handleChange(e) {
+  const [telephone, setTelephone] = useState();
+  function handleChange(e) {
         console.log(e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
-    }
+  }
 	return(
 	<div className='a'>
 	  {/* <Search/> */}
@@ -25,7 +30,10 @@ export default function Ajouterannonce(){
         <Form>
         <FormGroup>
           <Label for="Description">Description</Label>
-          <Input type="textarea" id="Description" placeholder="Entrez une description pour votre annonce" />
+          <Input type="textarea" id="Description" placeholder="Entrez une description pour votre annonce" 
+          value={description}
+          onChange={(e) => {
+          setDescription(e.target.value);}} />
         </FormGroup>
 		    <FormGroup>
           <Label for="Catégorie">Catégorie de votre annonce</Label> <br></br>
@@ -37,14 +45,20 @@ export default function Ajouterannonce(){
         </FormGroup>
 		    <FormGroup>
           <Label for="Details">A propos du cours:</Label> <br/>
-          <Input type="select" id="Details">
+          <Input type="select" id="Details"
+          value={details}
+          onChange={(e) => {
+          setDetails(e.target.value);}}>
             <option>En ligne</option>
             <option>Présentiel</option>
           </Input>
         </FormGroup>
         <FormGroup>
 			    <Label for="Details">Thème de votre annonce (module):</Label> <br/>
-          <Input type="select" id="Details">
+          <Input type="select" id="Details"
+          value={theme}
+          onChange={(e) => {
+          setTheme(e.target.value);}}>
             <option>Maths</option>
             <option>Physique</option>
 			      <option>Science</option>
@@ -56,7 +70,10 @@ export default function Ajouterannonce(){
          </FormGroup>
         <FormGroup>
           <Label for="Lieu">Lieu:</Label> <br/>
-          <Input type="text" id="Lieu" placeholder='Commune,Wilaya'/>
+          <Input type="text" id="Lieu" placeholder='Commune,Wilaya' 
+          value={lieu}
+          onChange={(e) => {
+          setLieu(e.target.value);}}/>
         </FormGroup>
         <FormGroup>
           <Label for="Photos">Ajoutez des photos</Label>
@@ -67,22 +84,27 @@ export default function Ajouterannonce(){
 			<Label for="tarif">Tarif:</Label> <br/>
 			<CurrencyInput className='Input'
                 id="Tarif"
-                name="input-name"
                 placeholder=""
                 defaultValue={1000}
                 decimalsLimit={5}
 				        suffix="DA/H"
-                onValueChange={(value, name) => console.log(value, name)}/>;
+                value={tarif}
+                onChange={(e) => {
+                setTarif(e.target.value);}}/>;
 		    </FormGroup>
         <FormGroup>
 		     <h1>Contact:</h1>
 		    	<Label for="Email">Email:</Label> <br/>
-          <Input type="Email" id="Email" placeholder='Email'/>
+          <Input type="Email" id="Email" placeholder='Email' 
+          value={email}
+          onChange={(e) => {
+          setEmail(e.target.value);}}/>
 		       <Label>Téléphone:</Label> <br/>
           <PhoneInput 
           placeholder="Entrez votre numéro de téléphone"
-          value={value}
-          onChange={setValue}/>
+          value={telephone}
+          onChange={(e) => {
+          setTelephone(e.target.value);}}/>
         </FormGroup>
 		    <FormGroup>
 		    	<button className='btn'>Publier</button>
