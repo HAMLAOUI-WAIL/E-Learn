@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState} from 'react';
+import { useState,useEffect} from 'react';
 import { Form, FormGroup, Label, Input} from 'reactstrap';
 import '../styles/Ajouterannonce.css';
 import CurrencyInput from 'react-currency-input-field';
@@ -7,11 +7,13 @@ import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import Search from './header/Search';
 import Navbar from './header/Navbar';
+import { useParams } from 'react-router-dom';
 //import Autocomplete from "react-google-autocomplete"
 
 export default function Ajouterannonce(props){
   const [details, setDetails] = useState('');
   const [theme, setTheme] = useState('');
+  const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
   const [lieu, setLieu] = useState('');
 	const [tarif, setTarif] = useState();
